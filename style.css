@@ -1,1 +1,74 @@
 
+/* ===== Тема: цвета, шрифты, то, что не покрывает Bootstrap ===== */
+
+:root {
+    --brand: #0d3b66;
+    --brand-2: #5a3e2b;
+    --brand-link: #ffd9a0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+/* ---- Шапка ---- */
+.site-header {
+    background-color: var(--brand);
+    border-bottom: 2px solid var(--brand-2);
+}
+
+.logo-img { max-width: 60px; height: auto; }
+
+.site-title { color: #fff; }
+
+.site-header .nav-link {
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color .2s;
+}
+.site-header .nav-link:hover,
+.site-header .nav-link:focus {
+    background-color: var(--brand-2);
+    color: #fff;
+}
+
+/* ---- Секции контента ---- */
+.content-section {
+    background-color: var(--brand);
+    color: #fff;
+    scroll-margin-top: 90px;
+}
+
+.content-section h2 { color: #fff; border-color: var(--brand-2) !important; }
+
+.content-section a {
+    color: var(--brand-link);
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+.content-section a:hover { color: #fff; }
+
+/* Таблица */
+.content-section .table { color: #000; }
+
+/* Форма внутри тёмной секции — светлый фон */
+.content-section form .form-label,
+.content-section form .form-check-label { color: #000; }
+
+/* ---- Подвал ---- */
+.site-footer {
+    background-color: var(--brand);
+    border-top: 3px solid var(--brand-2);
+    color: #fff;
+}
+
+/* ---- Mobile First: базовые отступы для очень маленьких экранов ---- */
+@media (max-width: 360px) {
+    .site-title { font-size: 1rem !important; }
+    .content-section { padding: 0.75rem !important; }
+}
